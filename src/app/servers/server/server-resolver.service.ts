@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/r
 import { Observable } from "rxjs";
 import { ServersService } from "../servers.service";
 
-interface Server{ id: number; name: string; status: string; } 
+interface Server{id: number;name: string;status: string;} 
 
 @Injectable()
 export class ServerResolver implements Resolve<Server>{
