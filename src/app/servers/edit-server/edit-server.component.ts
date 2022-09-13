@@ -23,9 +23,9 @@ export class EditServerComponent implements OnInit, CanComponentDeActivate  {
     const id = +this.route.snapshot.params['id'];
     this.route.queryParams.subscribe(
       (queryparams: Params) => {
-        console.log(queryparams['allowedit'])
+        // console.log(queryparams['allowedit'])
         this.allowedit = queryparams['allowedit'] === '1' ? true : false ;
-        console.log(this.allowedit)
+        // console.log(this.allowedit)
       }
     );
       this.servers = this.serversService.getServer(id);

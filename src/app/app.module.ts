@@ -17,6 +17,7 @@ import { AuthGaurd } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
 import { CanComponentDeGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ServerResolver } from './servers/server/server-resolver.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ServersService, AuthGaurd ,AuthService , CanComponentDeGaurd],
+  providers: [ServersService, AuthGaurd ,AuthService , CanComponentDeGaurd, ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
