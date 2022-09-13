@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { AuthGaurd } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
 import { CanComponentDeGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CanComponentDeGaurd } from './servers/edit-server/can-deactivate-gaurd.
     UserComponent,
     EditServerComponent,
     ServerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

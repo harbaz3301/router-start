@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Router, RouterModule, Routes } from "@angular/router";
 import { AuthGaurd } from "./auth-gaurd.service";
+import { ErrorPageComponent } from "./error-page/error-page.component";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { CanComponentDeGaurd } from "./servers/edit-server/can-deactivate-gaurd.service";
@@ -21,9 +22,11 @@ const appRoutes: Routes = [
             {path: ':id', component: ServerComponent},
             {path: ':id/edit', component: EditServerComponent, canDeactivate: [CanComponentDeGaurd] }
         ]},
-    {path: 'not-found', component: PageNotFoundComponent},
+    // {path: 'not-found', component: PageNotFoundComponent},
+    {path: 'not-found', component: ErrorPageComponent, data: {message: 'page not found!'} },
     {path: '**', redirectTo: '/not-found'}
   ];
+
 @NgModule({
     imports:[
     RouterModule.forRoot(appRoutes)
